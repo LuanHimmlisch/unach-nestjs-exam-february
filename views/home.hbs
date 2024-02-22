@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Home</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/public/site.css" type="text/css" rel="stylesheet">
+</head>
+
+<body id="top" class="bg-beishe title-center title-h1h2 debug-screens">
+
+
+
+    <div x-data="hero">
+        <div class="flex isolate overflow-hidden flex-col min-w-screen"
+            x-bind="bindings">
+            <div class="flex inset-0 justify-center items-start w-screen h-screen">
+                <img src="/public/logo.svg"
+                    x-show="showLogo"
+                    x-transition.duration.700ms.scale.origin.bottom.opacity
+                    class="mt-[10vw] w-full max-w-4xl pointer-events-none select-none"
+                    draggable="false"
+                    alt="">
+                <button class="absolute bottom-8 font-serif italic cursor-pointer"
+                    x-effect="showLogo && setTimeout(() => $el.classList.add('animate-pulse'), 1000);"
+                    x-show="showLogo"
+                    x-transition.delay.200ms.duration.1000ms.opacity>
+                    &darr; Check our services &darr;
+                </button>
+            </div>
+            <img src="/public/background.jpg" x-ref="stripes"
+                class="object-contain object-top absolute inset-0 mx-auto max-w-[max(1920px, 100vw)] h-full -z-10 select-none pointer-events-none"
+                draggable="false"
+                alt="">
+            <div class="flex absolute gap-[7%] w-full justify-center left-1/2 -translate-x-1/2 stripes -z-20 mx-auto select-none pointer-events-none"
+                aria-hidden="true"
+                :style="`max-width: ${width}px`">
+                <div class="flex-1 h-full bg-vintage-salmon"></div>
+                <div class="flex-1 h-full bg-vintage-red"></div>
+                <div class="flex-1 h-full bg-vintage-blue"></div>
+                <div class="flex-1 h-full bg-vintage-brown"></div>
+                <div class="flex-1 h-full bg-vintage-yellow"></div>
+            </div>
+
+            <div x-show="showLogo">
+                <div class="grid grid-cols-5 mx-auto w-full gap-[5%] items-start text-white 2xl:pt-32 h-screen"
+                    :style="`max-width: calc(${width}px + 2%)`">
+                    <div class="mt-24 border-2 cursor-pointer border-vintage-dark bg-vintage-salmon shadow-brutalist shadow-vintage-dark"
+                        x-data="{show: false}"
+                        x-on:mouseenter="show = true"
+                        x-on:mouseleave="show = false">
+                        <img src="//placekitten.com/500"
+                            class="object-cover w-full h-48 border-b-2 border-vintage-dark"
+                            alt="">
+                        <div x-show="show" x-collapse>
+                            <div class="px-5 my-5">
+                                <h3 class="text-lg font-bold">Weddings</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, explicabo!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-24 border-2 cursor-pointer border-vintage-dark bg-vintage-red shadow-brutalist shadow-vintage-dark"
+                        x-data="{show: false}"
+                        x-on:mouseenter="show = true"
+                        x-on:mouseleave="show = false">
+                        <img src="//placekitten.com/500"
+                            class="object-cover w-full h-48 border-b-2 border-vintage-dark"
+                            alt="">
+                        <div x-show="show" x-collapse>
+                            <div class="px-5 my-5">
+                                <h3 class="text-lg font-bold">Corporate Incentive Events</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, explicabo!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-10 h-full">
+                        <h2 class="text-4xl font-bold text-center text-vintage-dark font-protest">
+                            Get to know us
+                        </h2>
+                        <div class="flex flex-col flex-1 gap-10 justify-evenly items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="stroke-vintage-dark"
+                                width="48"
+                                height="48"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M6 9l6 6l6 -6" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="stroke-vintage-dark"
+                                width="48"
+                                height="48"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M6 9l6 6l6 -6" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="stroke-vintage-dark"
+                                width="48"
+                                height="48"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M6 9l6 6l6 -6" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="stroke-vintage-dark"
+                                width="48"
+                                height="48"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M6 9l6 6l6 -6" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="stroke-vintage-dark"
+                                width="48"
+                                height="48"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M6 9l6 6l6 -6" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="mt-24 border-2 cursor-pointer border-vintage-dark bg-vintage-brown shadow-brutalist shadow-vintage-dark"
+                        x-data="{show: false}"
+                        x-on:mouseenter="show = true"
+                        x-on:mouseleave="show = false">
+                        <img src="//placekitten.com/500"
+                            class="object-cover w-full h-48 border-b-2 border-vintage-dark"
+                            alt="">
+                        <div x-show="show" x-collapse>
+                            <div class="px-5 my-5">
+                                <h3 class="text-lg font-bold">Commercial</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, explicabo!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-24 border-2 cursor-pointer border-vintage-dark bg-vintage-yellow shadow-brutalist shadow-vintage-dark"
+                        x-data="{show: false}"
+                        x-on:mouseenter="show = true"
+                        x-on:mouseleave="show = false">
+                        <img src="//placekitten.com/500"
+                            class="object-cover w-full h-48 border-b-2 border-vintage-dark"
+                            alt="">
+                        <div x-show="show" x-collapse>
+                            <div class="px-5 my-5">
+                                <h3 class="text-lg font-bold">Industrial</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, explicabo!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div x-show="showLogo" class="isolate">
+            <div class="overflow-hidden relative py-32">
+                <div class="flex absolute justify-center w-full -z-10"
+                    aria-hidden="true">
+                    <div class="w-1/12 h-[200vh] bg-vintage-blue"
+                        style="transform: translate(-44vw, -38.3%) rotate(80deg)"></div>
+                    <div class="w-1/12 h-[200vh] bg-vintage-blue"
+                        style="transform: translate(44vw, -38.3%) rotate(-80deg)"></div>
+                </div>
+
+                <div class="mx-auto mt-72 max-w-7xl">
+                    <h2 class="mb-32 text-6xl tracking-wider text-center font-protest text-vintage-dark">Meet the team</h2>
+
+                    <div class="grid gap-20 md:grid-cols-3">
+                        <div class="bg-white border-2 cursor-pointer shadow-brutalist border-vintage-dark shadow-vintage-dark text-vintage-dark">
+                            <div class="px-5 py-2 text-sm">
+                                @johndoe
+                            </div>
+                            <img src="/public/person1.jpg" class="object-cover w-full h-60 border-y-2 border-vintage-dark" alt="">
+                            <div class="p-5">
+                                <h3 class="text-2xl font-bold tracking-wide font-protest">The Designer</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ullam!</p>
+                            </div>
+                        </div>
+                        <div class="bg-white border-2 cursor-pointer shadow-brutalist border-vintage-dark shadow-vintage-dark text-vintage-dark">
+                            <div class="px-5 py-2 text-sm">
+                                @johndoe
+                            </div>
+                            <img src="/public/person2.jpg" class="object-cover w-full h-60 border-y-2 border-vintage-dark" alt="">
+                            <div class="p-5">
+                                <h3 class="text-2xl font-bold tracking-wide font-protest">The Mastermind</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ullam!</p>
+                            </div>
+                        </div>
+                        <div class="bg-white border-2 cursor-pointer shadow-brutalist border-vintage-dark shadow-vintage-dark text-vintage-dark">
+                            <div class="px-5 py-2 text-sm">
+                                @johndoe
+                            </div>
+                            <img src="/public/person3.jpg" class="object-cover w-full h-60 border-y-2 border-vintage-dark" alt="">
+                            <div class="p-5">
+                                <h3 class="text-2xl font-bold tracking-wide font-protest">The Photographer</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ullam!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-32 mb-48">
+                <div class="isolate relative px-2 py-10 mx-auto max-w-7xl rounded-lg border-2 2xl:container md:px-10 border-vintage-dark shadow-vintage-dark shadow-brutalist bg-vintage-green not-hover">
+                    <h2 class="mb-10 tracking-wider text-center xl:text-5xl 2xl:text-6xl font-protest text-beishe">Want to have a chat?</h2>
+                    <p class="text-center">
+                        <a href="" class="inline-block px-5 py-2 font-bold text-center uppercase rounded-md border-2 transition-colors text-beishe border-beishe hover:border-vintage-dark hover:bg-vintage-dark">
+                            Contact us
+                        </a>
+                    </p>
+                    <div class="absolute bottom-0 -mb-1 w-32 h-32 border-r-4 border-b-4 bottom- border-vintage-dark bg-vintage-green -z-10"
+                        style="transform: translateY(50%) scaleX(50%) rotate(45deg)">
+
+                    </div>
+                </div>
+            </div>
+            <div class="border-t-2 border-vintage-dark">
+                <div class="border-b-2 border-vintage-dark">
+                    <ul class="flex gap-5 justify-evenly px-2 py-5 mx-auto w-full max-w-7xl text-3xl text-vintage-dark">
+                        <li class="uppercase">
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li class="uppercase">
+                            <a href="#">
+                                Weddings
+                            </a>
+                        </li>
+                        <li class="uppercase">
+                            <a href="#">
+                                Corporative
+                            </a>
+                        </li>
+                        <li class="uppercase">
+                            <a href="#">
+                                Commercial
+                            </a>
+                        </li>
+                        <li class="uppercase">
+                            <a href="#">
+                                Industrial
+                            </a>
+                        </li>
+                        <li class="uppercase">
+                            <a href="#">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex justify-between items-center p-10 text-vintage-dark">
+                    <p>&copy; Copyright Rolling Rock Productions LLC.</p>
+                    <ul class="flex gap-5 text-xl uppercase">
+                        <li><a href="">Terms</a></li>
+                        <li><a href="">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/public/main.js"></script>
+</body>
+
+</html>
